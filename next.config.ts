@@ -28,6 +28,26 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    // Canonical host is app.thewonderwarrior.com. Any request arriving on the
+    // bare apex or www subdomain gets 308-redirected to the same path on app.
+    // 308 preserves method and body, so POSTs to e.g. /api/* still work.
+    const target = "https://app.thewonderwarrior.com/:path*";
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "thewonderwarrior.com" }],
+        destination: target,
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.thewonderwarrior.com" }],
+        destination: target,
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
