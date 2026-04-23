@@ -43,6 +43,12 @@ export const metadata: Metadata = {
   title: "Being a Wonder Warrior",
   description:
     "An immersive experience — Seven Principles and Practices for a Life of Wonder, with Beata Chapman, Ph.D.",
+  // iOS Safari uses this specifically when "Add to Home Screen" is used;
+  // without it iOS falls back to the tab title. Keeping in sync with
+  // the manifest short_name so the label is consistent across platforms.
+  appleWebApp: {
+    title: "Wonder Warrior",
+  },
 };
 
 export default function RootLayout({

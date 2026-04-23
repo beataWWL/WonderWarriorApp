@@ -5,7 +5,7 @@ import type { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Being a Wonder Warrior",
-    short_name: "Wonder",
+    short_name: "Wonder Warrior",
     description:
       "An immersive experience — Seven Principles and Practices for a Life of Wonder.",
     start_url: "/",
