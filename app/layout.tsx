@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   // without it iOS falls back to the tab title. Keeping in sync with
   // the manifest short_name so the label is consistent across platforms.
   appleWebApp: {
-    title: "Wonder Warrior",
+    title: "WonderWarrior",
   },
 };
 
