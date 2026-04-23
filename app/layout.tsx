@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import "./globals.css";
 
 const cinzel = Cinzel_Decorative({
@@ -58,6 +59,7 @@ export default function RootLayout({
         <Nav />
         <main className="flex-1 pt-[60px]">{children}</main>
         <Footer />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );
