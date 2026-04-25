@@ -22,16 +22,22 @@ export default async function ClassPage(props: PageProps<"/classes/[slug]">) {
 
   return (
     <article className="max-w-[960px] mx-auto px-6 pb-8">
-      <header className="text-center pt-12 pb-8 mb-10 border-b border-[rgba(0,212,255,0.15)]">
+      <header className="text-center pt-12 pb-8 mb-10 border-b border-edge">
         <p className="font-label font-semibold text-ember text-[0.75rem] uppercase tracking-[0.4em] mb-2">
           {data.label}
         </p>
-        <h1 className="font-display brand-gradient text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.25] mb-3">
+        <p className="font-label font-semibold text-lightning text-[0.7rem] uppercase tracking-[0.35em] mb-1">
+          Principle {data.num}
+        </p>
+        <p className="font-display text-clarity text-[clamp(1.1rem,2.4vw,1.5rem)] leading-snug mb-5">
+          {data.principle}
+        </p>
+        <p className="font-label font-semibold text-ember text-[0.7rem] uppercase tracking-[0.35em] mb-1">
+          Practice {data.num}
+        </p>
+        <h1 className="font-display brand-gradient text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.25]">
           {data.title}
         </h1>
-        <p className="font-serif italic text-muted text-[1.1rem]">
-          {data.subtitle}
-        </p>
       </header>
 
       {data.sections.map((section, i) => (

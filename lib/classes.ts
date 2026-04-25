@@ -25,8 +25,10 @@ export type ClassData = {
   slug: string;
   num: number;
   label: string;
+  /** The conceptual Principle for this class (e.g., "Building the Heart to Stay"). */
+  principle: string;
+  /** The Practice — what the student does (e.g., "Warm Stillness"). Shown as the page title. */
   title: string;
-  subtitle: string;
   sections: Section[];
 };
 
@@ -35,8 +37,8 @@ export const classes: ClassData[] = [
     slug: "warm-stillness",
     num: 1,
     label: "Class 1 · Practice 1",
+    principle: "Building the Heart to Stay",
     title: "Warm Stillness",
-    subtitle: "Building the heart to stay",
     sections: [
       {
         kind: "card",
@@ -127,8 +129,8 @@ export const classes: ClassData[] = [
     slug: "generative-commitment",
     num: 2,
     label: "Class 2 · Practice 2",
+    principle: "Stabilizing the Vessel",
     title: "Generative Commitment",
-    subtitle: "Stabilizing the vessel",
     sections: [
       {
         kind: "card",
@@ -183,22 +185,6 @@ export const classes: ClassData[] = [
         ],
       },
       {
-        kind: "card",
-        title: "Working Agreements",
-        icon: "🤝",
-        blocks: [
-          {
-            type: "agreements",
-            items: [
-              "We honor the efforts, experience, ideas, and sharing of all by listening more than we speak (2 ears, 1 mouth) and by being kind.",
-              "There are no dumb questions and no wrong answers.",
-              "Keep an attitude of mutual support at all times.",
-              "Suspend judgment, disagreement, and personal preference for the duration of our time together.",
-            ],
-          },
-        ],
-      },
-      {
         kind: "reflection",
         prompt: "What habitual patterns show up when you sit down to practice?",
         placeholders: [
@@ -212,8 +198,8 @@ export const classes: ClassData[] = [
     slug: "wide-field",
     num: 3,
     label: "Class 3 · Practice 3",
-    title: "Cultivating a Wide Field",
-    subtitle: "Including this, too",
+    principle: "Simultaneous Inclusion",
+    title: "Cultivate a Wide Field",
     sections: [
       {
         kind: "card",
@@ -246,7 +232,7 @@ export const classes: ClassData[] = [
       },
       {
         kind: "card",
-        title: "Practice 3 — Cultivating a Wide Field",
+        title: "Practice 3 — Cultivate a Wide Field",
         icon: "🌙",
         blocks: [
           {
@@ -285,8 +271,8 @@ export const classes: ClassData[] = [
     slug: "living-in-question",
     num: 4,
     label: "Class 4 · Practice 4",
+    principle: "Breaking Through Obstacles and Habits of Mind",
     title: "Living in Question",
-    subtitle: "Breaking through blocks and habits of mind",
     sections: [
       {
         kind: "card",
@@ -350,8 +336,8 @@ export const classes: ClassData[] = [
     slug: "purposelessness",
     num: 5,
     label: "Class 5 · Practice 5",
+    principle: "Nowhere to Go, Nothing to Fix",
     title: "Intentional Purposelessness",
-    subtitle: "The wisdom of nowhere to go, nothing to fix",
     sections: [
       {
         kind: "card",
@@ -438,8 +424,8 @@ export const classes: ClassData[] = [
     slug: "deep-noticing",
     num: 6,
     label: "Class 6 · Practice 6",
-    title: "Connection — Deep Noticing",
-    subtitle: "Antidote to suffering",
+    principle: "Minimizing Suffering Through Connection",
+    title: "Deep Noticing",
     sections: [
       {
         kind: "card",
@@ -472,7 +458,7 @@ export const classes: ClassData[] = [
       },
       {
         kind: "card",
-        title: "Practice 6 — Connection: Deep Noticing",
+        title: "Practice 6 — Deep Noticing",
         icon: "🌙",
         blocks: [
           {
@@ -521,8 +507,8 @@ export const classes: ClassData[] = [
     slug: "body-of-now",
     num: 7,
     label: "Class 7 · Practice 7 · Final Session",
+    principle: "Intimacy with the Present Moment",
     title: "Immediacy — the Body of Now",
-    subtitle: "Intimacy in everyday life",
     sections: [
       {
         kind: "card",
@@ -570,7 +556,7 @@ export const classes: ClassData[] = [
             type: "steps",
             steps: [
               "In any moment, drop into direct sensory contact with what is happening in your body <strong>right now</strong>. Not a thought about it — the raw experience itself.",
-              'Let irritations, inconveniences, or "problems" become entry points to presence. The pothole, the traffic, the difficult colleague — each one is an invitation.',
+              "Let an irritation become an entry point. The difficult colleague is an invitation.",
               "Practice with the full texture of the moment — warmth, coolness, weight, breath, sound. Not analyzing — just meeting.",
             ],
           },

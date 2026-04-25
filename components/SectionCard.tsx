@@ -27,7 +27,7 @@ export function SectionCard({
       : "bg-lightning/15 border-lightning/25";
 
   return (
-    <section className="bg-deep-ocean border border-[rgba(0,212,255,0.15)] rounded-2xl p-8 mb-6">
+    <section className="bg-deep-ocean border border-edge rounded-2xl p-8 mb-6">
       <h3
         className={`font-label font-semibold text-[0.75rem] uppercase tracking-[0.35em] mb-5 flex items-center gap-3 ${titleColor}`}
       >

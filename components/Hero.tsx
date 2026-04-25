@@ -32,11 +32,7 @@ export function Hero() {
       </blockquote>
       <Link
         href="/classes/warm-stillness"
-        className="relative inline-block font-label font-bold uppercase tracking-[0.3em] text-[0.75rem] text-white px-8 py-3 rounded-full transition-opacity hover:opacity-90"
-        style={{
-          background: "linear-gradient(90deg, #ff6b1a, #ff9d57)",
-          boxShadow: "0 4px 20px rgba(255,107,26,0.4)",
-        }}
+        className="btn-flame relative inline-block font-label font-bold uppercase tracking-[0.3em] text-[0.75rem] text-white px-8 py-3 rounded-full transition hover:opacity-90"
       >
         Begin the Journey →
       </Link>

@@ -13,6 +13,9 @@
   --color-clarity: #e8f8ff;
   --color-muted: #7aa8b8;
 
+  /* Card / divider edge — used wherever a subtle cyan border separates surfaces. */
+  --color-edge: rgba(0, 212, 255, 0.15);
+
   /* Brand fonts — variables set by next/font in layout.tsx */
   --font-display: var(--font-cinzel), serif;
   --font-serif: var(--font-cormorant), serif;
@@ -59,4 +62,33 @@ body::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/*
+ * Brand CTA button — the canonical Warrior Flame gradient + glow.
+ * Use on every primary action so the brand stays consistent without
+ * re-typing hex codes.
+ */
+.btn-flame {
+  background: linear-gradient(90deg, var(--color-flame), var(--color-spark));
+  box-shadow: 0 4px 20px rgba(255, 107, 26, 0.4);
+}
+.btn-flame:hover {
+  box-shadow: 0 6px 26px rgba(255, 107, 26, 0.55);
+}
+
+/*
+ * Numbered step orb — slightly different angle and a tighter glow than the
+ * CTA button. Used on PracticeSteps numbered circles.
+ */
+.flame-orb {
+  background: linear-gradient(135deg, var(--color-flame), var(--color-spark));
+  box-shadow: 0 0 18px rgba(255, 107, 26, 0.45);
+}
+
+/*
+ * The cyan-to-ember bar that animates in along the top of a hovered card.
+ */
+.brand-bar {
+  background: linear-gradient(90deg, var(--color-lightning), var(--color-ember));
 }

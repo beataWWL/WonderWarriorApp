@@ -15,7 +15,7 @@ export function CourseReview() {
               <strong className="font-label text-ember mr-1 font-semibold">
                 {c.num}.
               </strong>
-              {c.title} — {c.subtitle.toLowerCase()}
+              {c.title} — {c.principle}
             </Link>
           </li>
         ))}

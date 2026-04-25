@@ -40,7 +40,7 @@ export default function SignUpPage() {
 
       <form
         onSubmit={onSubmit}
-        className="bg-deep-ocean/60 border border-[rgba(0,212,255,0.15)] rounded-3xl p-8 space-y-5"
+        className="bg-deep-ocean/60 border border-edge rounded-3xl p-8 space-y-5"
       >
         <Field
           label="Name"
@@ -78,11 +78,7 @@ export default function SignUpPage() {
         <button
           type="submit"
           disabled={pending}
-          className="w-full font-label font-bold uppercase tracking-[0.3em] text-[0.8rem] text-white px-8 py-3 rounded-full transition hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
-          style={{
-            background: "linear-gradient(90deg, #ff6b1a, #ff9d57)",
-            boxShadow: "0 4px 20px rgba(255,107,26,0.4)",
-          }}
+          className="btn-flame w-full font-label font-bold uppercase tracking-[0.3em] text-[0.8rem] text-white px-8 py-3 rounded-full transition hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {pending ? "Creating account…" : "Create Account"}
         </button>
@@ -132,7 +128,7 @@ function Field({
         autoComplete={autoComplete}
         required={required}
         minLength={minLength}
-        className="w-full font-body bg-abyss/50 border border-[rgba(0,212,255,0.15)] rounded-xl text-clarity text-[0.95rem] px-4 py-3 outline-none transition focus:border-lightning focus:shadow-[0_0_0_3px_rgba(0,212,255,0.12)]"
+        className="w-full font-body bg-abyss/50 border border-edge rounded-xl text-clarity text-[0.95rem] px-4 py-3 outline-none transition focus:border-lightning focus:shadow-[0_0_0_3px_rgba(0,212,255,0.12)]"
       />
       {helper ? (
         <span className="font-body text-[0.8rem] text-muted mt-1 block">

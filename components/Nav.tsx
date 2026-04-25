@@ -14,6 +14,7 @@ const items: NavItem[] = [
     href: `/classes/${c.slug}`,
     label: `${c.num} · ${shortLabel(c.title)}`,
   })),
+  { href: "/community", label: "Community" },
 ];
 
 function shortLabel(title: string): string {
@@ -52,7 +53,7 @@ export function Nav() {
 
   return (
     <>
-      <nav className="fixed top-0 inset-x-0 z-50 h-[60px] bg-[rgba(0,7,18,0.92)] backdrop-blur border-b border-[rgba(0,212,255,0.15)] px-6 flex items-center gap-0">
+      <nav className="fixed top-0 inset-x-0 z-50 h-[60px] bg-[rgba(0,7,18,0.92)] backdrop-blur border-b border-edge px-6 flex items-center gap-0">
         {/* Brand — always visible */}
         <Link
           href="/"
@@ -172,7 +173,7 @@ export function Nav() {
               })}
             </div>
 
-            <div className="border-t border-[rgba(0,212,255,0.15)] px-5 py-4">
+            <div className="border-t border-edge px-5 py-4">
               <AuthStatus
                 variant="stacked"
                 onAction={() => setOpen(false)}
@@ -268,15 +269,9 @@ function AuthStatus({
         onClick={onAction}
         className={
           stacked
-            ? "font-label font-bold uppercase tracking-[0.25em] text-[0.8rem] text-white px-4 py-3 rounded-xl transition hover:opacity-90 text-center"
-            : "font-label font-bold uppercase tracking-[0.2em] text-[0.72rem] text-white px-3 py-1.5 rounded-full transition hover:opacity-90"
+            ? "btn-flame font-label font-bold uppercase tracking-[0.25em] text-[0.8rem] text-white px-4 py-3 rounded-xl transition hover:opacity-90 text-center"
+            : "btn-flame font-label font-bold uppercase tracking-[0.2em] text-[0.72rem] text-white px-3 py-1.5 rounded-full transition hover:opacity-90"
         }
-        style={{
-          background: "linear-gradient(90deg, #ff6b1a, #ff9d57)",
-          boxShadow: stacked
-            ? "0 6px 18px rgba(255,107,26,0.35)"
-            : "0 4px 12px rgba(255,107,26,0.3)",
-        }}
       >
         Sign Up
       </Link>

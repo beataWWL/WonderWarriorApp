@@ -118,14 +118,14 @@ export function ReflectionSection({ classSlug, prompt, placeholders }: Props) {
   }
 
   return (
-    <section className="bg-storm/15 border border-[rgba(0,212,255,0.15)] rounded-2xl p-8 mb-6">
+    <section className="bg-storm/15 border border-edge rounded-2xl p-8 mb-6">
       <h3 className="font-label font-semibold text-[0.75rem] uppercase tracking-[0.35em] text-lightning mb-5">
         📓 Reflection Journal
       </h3>
       <p className="font-serif italic text-muted text-[1rem] mb-4">{prompt}</p>
 
       {!sessionPending && !isSignedIn ? (
-        <p className="font-body text-[0.85rem] text-muted bg-abyss/40 border border-[rgba(0,212,255,0.15)] rounded-xl px-4 py-3 mb-4">
+        <p className="font-body text-[0.85rem] text-muted bg-abyss/40 border border-edge rounded-xl px-4 py-3 mb-4">
           Your notes are being saved to this browser only.{" "}
           <a
             href="/signin"
@@ -150,7 +150,7 @@ export function ReflectionSection({ classSlug, prompt, placeholders }: Props) {
           }
           placeholder={placeholder}
           rows={3}
-          className="w-full font-body bg-abyss/50 border border-[rgba(0,212,255,0.15)] rounded-xl text-clarity text-[0.95rem] p-4 resize-y min-h-[100px] leading-[1.7] outline-none mb-3 transition focus:border-lightning focus:shadow-[0_0_0_3px_rgba(0,212,255,0.12)] placeholder:text-muted/50"
+          className="w-full font-body bg-abyss/50 border border-edge rounded-xl text-clarity text-[0.95rem] p-4 resize-y min-h-[100px] leading-[1.7] outline-none mb-3 transition focus:border-lightning focus:shadow-[0_0_0_3px_rgba(0,212,255,0.12)] placeholder:text-muted/50"
         />
       ))}
 
@@ -159,11 +159,7 @@ export function ReflectionSection({ classSlug, prompt, placeholders }: Props) {
           onClick={onSave}
           type="button"
           disabled={saving}
-          className="font-label font-bold uppercase tracking-[0.3em] text-[0.75rem] text-white px-7 py-2.5 rounded-full transition hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
-          style={{
-            background: "linear-gradient(90deg, #ff6b1a, #ff9d57)",
-            boxShadow: "0 4px 20px rgba(255,107,26,0.35)",
-          }}
+          className="btn-flame font-label font-bold uppercase tracking-[0.3em] text-[0.75rem] text-white px-7 py-2.5 rounded-full transition hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {saving ? "Saving…" : "Save Notes"}
         </button>

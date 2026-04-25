@@ -2,16 +2,6 @@ import { Hero } from "@/components/Hero";
 import { PrincipleCard } from "@/components/PrincipleCard";
 import { classes } from "@/lib/classes";
 
-const taglines: Record<string, string> = {
-  "warm-stillness": "Building the heart to stay",
-  "generative-commitment": "Stabilizing the vessel",
-  "wide-field": "Widening the field",
-  "living-in-question": "Breaking through blocks and habits of mind",
-  purposelessness: "The wisdom of nowhere to go, nothing to fix",
-  "deep-noticing": "Antidote to suffering",
-  "body-of-now": "Intimacy in everyday life",
-};
-
 const facts = [
   "Unhindered by sorrow, rage, or lust — the ability to experience strong, hot emotions is a natural source of wonder.",
   "Wonder is not reliant on joy, positivity, or specialness — it is endemic in the mundane, the everyday, the simple.",
@@ -30,6 +20,25 @@ export default function Home() {
     <>
       <Hero />
 
+      <section className="max-w-[760px] mx-auto px-6 -mt-6 mb-4">
+        <div className="bg-deep-ocean/60 border border-edge rounded-2xl px-6 py-5 text-center">
+          <p className="font-label font-semibold text-lightning text-[0.7rem] uppercase tracking-[0.35em] mb-2">
+            About your reflections
+          </p>
+          <p className="font-serif italic text-muted text-[1rem] leading-[1.7]">
+            You can begin right away — your notes will save to this browser as
+            you go. When you&rsquo;re ready,{" "}
+            <a
+              href="/signup"
+              className="text-lightning hover:text-ember transition not-italic font-body"
+            >
+              create an account
+            </a>{" "}
+            to keep them with you across devices.
+          </p>
+        </div>
+      </section>
+
       <section className="px-6 py-16 max-w-[1100px] mx-auto">
         <p className="font-label font-semibold text-ember text-center text-[0.75rem] uppercase tracking-[0.4em] mb-2">
           The Seven Principles and Practices for a
@@ -37,7 +46,7 @@ export default function Home() {
           Life of Wonder
         </p>
         <h2 className="font-display brand-gradient-warm text-center text-[2rem] mb-12">
-          Your 7 Practices
+          Your 7 Principles &amp; Practices
         </h2>
 
         <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))]">
@@ -45,7 +54,7 @@ export default function Home() {
             <PrincipleCard
               key={c.slug}
               principleNum={c.num}
-              principleTagline={taglines[c.slug] ?? c.subtitle}
+              principleName={c.principle}
               practiceNum={c.num}
               practiceName={c.title}
               href={`/classes/${c.slug}`}
@@ -55,7 +64,7 @@ export default function Home() {
       </section>
 
       <div className="max-w-[960px] mx-auto px-6 pb-16">
-        <section className="bg-deep-ocean/60 border border-[rgba(0,212,255,0.15)] rounded-3xl p-10 mb-8">
+        <section className="bg-deep-ocean/60 border border-edge rounded-3xl p-10 mb-8">
           <h3 className="font-label font-semibold text-lightning text-center text-[0.8rem] uppercase tracking-[0.4em] mb-8">
             Facts About Wonder
           </h3>
@@ -74,7 +83,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-deep-ocean border border-[rgba(0,212,255,0.15)] rounded-3xl p-10 text-center">
+        <section className="bg-deep-ocean border border-edge rounded-3xl p-10 text-center">
           <h3 className="font-label font-semibold text-ember text-[0.8rem] uppercase tracking-[0.4em] mb-8">
             Building the Wonder Muscle — Skill Set
           </h3>

@@ -3,7 +3,7 @@
 // To add offline support later, add a `fetch` handler that reads from a
 // Cache Storage bucket (or use Workbox / Serwist).
 
-const VERSION = "v1";
+const VERSION = "v2-2026-04-24";
 
 self.addEventListener("install", () => {
   // Take over as soon as this SW finishes installing.
